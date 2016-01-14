@@ -37,9 +37,10 @@
               })
 
               socket.on('chat message', function (msg) {
-                $('#messages').append($('<li>').text(msg.message))
+                console.log(msg);
+                $('#messages').append($('<li>').text(msg.message.slice(3, (msg.message.length - 4))))
+                $('#messages').append($('<li>').text(new Date(msg.timestamp)))
               })
-
               }
             })
           })
