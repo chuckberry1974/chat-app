@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+
+    <!-- Auth0Lock script -->
+    <script src="//cdn.auth0.com/js/lock-8.1.min.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.4.3.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+
+    <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="bower_components/paper-input/paper-input.html">
+    <link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
+    <link rel="import" href="bower_components/iron-component-page/iron-component-page.html">
+    <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+    <link rel="stylesheet" href="styles.css">
+
+  <body>
+
+    <paper-header-panel>
+        <div class="flex">
+          <button id="login">Log In</button>
+          <button id="logout">Log Out</button>
+        </div>
+    </paper-header-panel>
+
+    <paper-icon-button icon="menu" style="background: orange;"></paper-icon-button>
+    <paper-icon-button icon="favorite"></paper-icon-button>
+
+      <ul id="messages"></ul>
+      <form action="">
+        <input id="m" autocomplete="off" /><button>Send</button>
+
+      </form>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
