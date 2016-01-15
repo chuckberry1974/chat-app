@@ -1,3 +1,4 @@
+const PORT = process.env.PORT || 3000
 const express = require('express')
 const app = express()
 var http = require('http').Server(app)
@@ -17,6 +18,11 @@ app.use(express.static(root))
 //
 // app.use("/bower_components", express.static(__dirname + "/bower_components"))
 
-http.listen(3000, function () {
-console.log('listening on *:3000')
-})
+http.listen(PORT, () => {
+  console.log(`Listening to http://localhost:${PORT}`)
+}
+)
+
+// http.listen(3000, function () {
+// console.log('listening on *:3000')
+// })
