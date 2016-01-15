@@ -12,7 +12,7 @@
               window.localStorage.setItem('userToken', token);
               window.localStorage.setItem('profile', JSON.stringify(profile));
 
-            var socket = io.connect('http://ga-webchat.herokuapp.com/', {
+            var socket = io.connect('https://ga-webchat.herokuapp.com/', {
               'query': 'token=' + token
               })
 
